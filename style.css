@@ -6,7 +6,8 @@
   --colour-secondary: #64748b;
   --colour-light: #f4f4f4;
   --colour-card-bg: #1e293b;
-  --contact-icon-size: 48px;
+  /* Size for contact icon circles */
+  --contact-icon-size: 40px;
 }
 
 body {
@@ -166,12 +167,19 @@ h2 {
 .project-card:hover {
   transform: translateY(-6px);
 }
-.project-card img {
+
+/* Ensure images inside project cards fit nicely within a container */
+.project-card .project-image {
   width: 100%;
   height: 200px;
-  object-fit: cover;
-  /* round only top corners to match card */
+  overflow: hidden;
   border-radius: 8px 8px 0 0;
+}
+.project-card .project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .project-card h3 {
   margin: 1rem 1rem 0.5rem;
@@ -224,36 +232,45 @@ h2 {
 /* Contact icons layout */
 .contact-icons {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
   margin-top: 2rem;
 }
 .contact-icons a {
   width: var(--contact-icon-size);
   height: var(--contact-icon-size);
+  border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  background-color: rgba(243, 244, 246, 0.05); /* subtle light circle on dark bg */
   text-decoration: none;
-  background-color: var(--colour-card-bg);
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.15s ease, background-color 0.15s ease;
 }
 .contact-icons a i {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--colour-primary);
+  line-height: 1;
 }
 .contact-icons a:hover {
-  transform: translateY(-4px);
-  background-color: rgba(34, 211, 238, 0.15);
+  transform: translateY(-2px);
+  background-color: rgba(34, 211, 238, 0.15); /* accent tint on hover */
 }
-/* Brand colour tints on hover */
-.contact-icons a.phone:hover i { color: #16a34a; }
-.contact-icons a.whatsapp:hover i { color: #25d366; }
-.contact-icons a.email:hover i { color: #ea4335; }
-.contact-icons a.linkedin:hover i { color: #0a66c2; }
+/* Brand-specific colour tints on hover */
+.contact-icons a.linkedin:hover i {
+  color: #0a66c2;
+}
+.contact-icons a.whatsapp:hover i {
+  color: #25d366;
+}
+.contact-icons a.email:hover i {
+  color: #ea4335;
+}
+.contact-icons a.phone:hover i {
+  color: #16a34a;
+}
 
 /* Footer */
 .footer {
