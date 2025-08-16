@@ -149,36 +149,69 @@ h2 {
 }
 
 /* Projects Section */
-.projects-section .project {
-  margin-bottom: 2rem;
+/* Project cards grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.project-card {
   background-color: var(--colour-card-bg);
-  padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.2s ease;
 }
-.projects-section h3 {
-  margin-top: 0;
+.project-card:hover {
+  transform: translateY(-6px);
+}
+.project-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.project-card h3 {
+  margin: 1rem 1rem 0.5rem;
   color: var(--colour-primary);
 }
-.projects-section p {
-  margin-bottom: 0;
+.project-card p {
+  margin: 0 1rem 1rem;
   color: var(--colour-light);
 }
 
 /* Contact Section */
-.contact-list {
-  list-style: none;
-  padding-left: 0;
-  font-size: 1rem;
+/* Contact cards grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
-.contact-list li {
+.contact-card {
+  background-color: var(--colour-card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+.contact-card:hover {
+  transform: translateY(-4px);
+}
+.contact-card i {
+  font-size: 2rem;
+  color: var(--colour-primary);
   margin-bottom: 0.5rem;
 }
-.contact-list a {
+.contact-card p {
+  margin: 0.5rem 0 0;
+  color: var(--colour-light);
+}
+.contact-card a {
   color: var(--colour-primary);
   text-decoration: none;
 }
-.contact-list a:hover {
+.contact-card a:hover {
   text-decoration: underline;
 }
 

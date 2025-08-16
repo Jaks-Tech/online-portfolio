@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact – Jeremiah Kerosi</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Include Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-dExO4p9xPNhGJYhP3vFnrXKpJc2PHoU5Pu9M+CdvmKjuCfZIw0llNksYuRl9nU9XYCQ2h6vv7Z8pc7k6/3k6Rg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
   <!-- Navigation -->
@@ -24,12 +32,28 @@
   <section class="section contact-section">
     <div class="container">
       <h2>Contact</h2>
-      <p>You can reach me via:</p>
-      <ul class="contact-list">
-        <li><strong>Phone:</strong> +254&nbsp;702&nbsp;527&nbsp;918</li>
-        <li><strong>Email:</strong> <a href="mailto:kerosijeremiah@gmail.com">kerosijeremiah@gmail.com</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jeremiah-kerosi-73a934226/" target="_blank">linkedin.com/in/jeremiah-kerosi-73a934226</a></li>
-      </ul>
+      <div class="contact-grid">
+        <!-- Phone -->
+        <div class="contact-card">
+          <i class="fas fa-phone"></i>
+          <p><a href="tel:+254702527918">+254&nbsp;702&nbsp;527&nbsp;918</a></p>
+        </div>
+        <!-- WhatsApp -->
+        <div class="contact-card">
+          <i class="fab fa-whatsapp"></i>
+          <p><a href="https://wa.me/254702527918" target="_blank">Chat on WhatsApp</a></p>
+        </div>
+        <!-- Email -->
+        <div class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <p><a href="mailto:kerosijeremiah@gmail.com">kerosijeremiah@gmail.com</a></p>
+        </div>
+        <!-- LinkedIn -->
+        <div class="contact-card">
+          <i class="fab fa-linkedin"></i>
+          <p><a href="https://www.linkedin.com/in/jeremiah-kerosi-73a934226/" target="_blank">LinkedIn Profile</a></p>
+        </div>
+      </div>
     </div>
   </section>
 
