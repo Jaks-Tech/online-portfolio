@@ -6,6 +6,7 @@
   --colour-secondary: #64748b;
   --colour-light: #f4f4f4;
   --colour-card-bg: #1e293b;
+  --contact-icon-size: 48px;
 }
 
 body {
@@ -219,6 +220,40 @@ h2 {
 .contact-card a:hover {
   text-decoration: underline;
 }
+
+/* Contact icons layout */
+.contact-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.contact-icons a {
+  width: var(--contact-icon-size);
+  height: var(--contact-icon-size);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  background-color: var(--colour-card-bg);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.contact-icons a i {
+  font-size: 1.4rem;
+  color: var(--colour-primary);
+}
+.contact-icons a:hover {
+  transform: translateY(-4px);
+  background-color: rgba(34, 211, 238, 0.15);
+}
+/* Brand colour tints on hover */
+.contact-icons a.phone:hover i { color: #16a34a; }
+.contact-icons a.whatsapp:hover i { color: #25d366; }
+.contact-icons a.email:hover i { color: #ea4335; }
+.contact-icons a.linkedin:hover i { color: #0a66c2; }
 
 /* Footer */
 .footer {
