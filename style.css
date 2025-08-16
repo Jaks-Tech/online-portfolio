@@ -167,8 +167,10 @@ h2 {
 }
 .project-card img {
   width: 100%;
-  height: 160px;
+  height: 200px;
   object-fit: cover;
+  /* round only top corners to match card */
+  border-radius: 8px 8px 0 0;
 }
 .project-card h3 {
   margin: 1rem 1rem 0.5rem;
@@ -198,10 +200,13 @@ h2 {
 .contact-card:hover {
   transform: translateY(-4px);
 }
-.contact-card i {
-  font-size: 2rem;
-  color: var(--colour-primary);
+.contact-card img.contact-icon-image {
+  width: 48px;
+  height: 48px;
   margin-bottom: 0.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .contact-card p {
   margin: 0.5rem 0 0;
