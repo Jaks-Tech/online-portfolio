@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects – Jeremiah Kerosi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Jeremiah Kerosi</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Projects Section -->
+  <section class="section projects-section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>BBC News Multi‑Label Text Classifier</h3>
+        <p>
+          Built an AI model to classify news articles into multiple categories using machine learning and
+          natural language processing techniques. Applied Grid Search and cross‑validation for
+          hyper‑parameter tuning to achieve robust performance.
+        </p>
+      </div>
+      <div class="project">
+        <h3>Building Defect Detection (YOLOv8)</h3>
+        <p>
+          Developed a computer vision system based on YOLOv8 to detect structural defects in buildings.
+          Implemented automated training pipelines and deployed the model for real‑time analysis.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="projectsYear"></span> Jeremiah Kerosi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Update footer year dynamically
+    document.getElementById('projectsYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

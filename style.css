@@ -1,10 +1,19 @@
 /* Global Styles */
+:root {
+  /* Custom theme colours */
+  --colour-bg: #0f172a;
+  --colour-primary: #22d3ee;
+  --colour-secondary: #64748b;
+  --colour-light: #f4f4f4;
+  --colour-card-bg: #1e293b;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #333;
-  background-color: #f9f9f9;
+  color: var(--colour-light);
+  background-color: var(--colour-bg);
   line-height: 1.6;
 }
 
@@ -17,12 +26,13 @@ body {
 
 /* Navigation */
 .navbar {
-  background-color: #222;
-  color: #fff;
-  padding: 0.5rem 0;
+  background-color: var(--colour-bg);
+  color: var(--colour-light);
+  padding: 0.75rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .nav-container {
   display: flex;
@@ -30,8 +40,9 @@ body {
   justify-content: space-between;
 }
 .logo {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
+  color: var(--colour-primary);
 }
 .nav-links {
   list-style: none;
@@ -39,13 +50,13 @@ body {
   gap: 1rem;
 }
 .nav-links li a {
-  color: #fff;
+  color: var(--colour-light);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 .nav-links li a:hover {
-  color: #ffd166;
+  color: var(--colour-primary);
 }
 
 /* Sections */
@@ -56,7 +67,7 @@ h2 {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2rem;
-  color: #333;
+  color: var(--colour-primary);
 }
 
 /* About Section */
@@ -67,39 +78,40 @@ h2 {
   gap: 2rem;
 }
 .profile-image img {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #ffd166;
+  border: 4px solid var(--colour-primary);
 }
 .about-content h1 {
   margin-top: 0;
   font-size: 2rem;
-  color: #2b2d42;
+  color: var(--colour-light);
 }
 
 .about-content p {
   font-size: 1rem;
   max-width: 600px;
+  color: var(--colour-light);
 }
 
 /* Skills Section */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
 }
 .skill-card {
-  background-color: #fff;
+  background-color: var(--colour-card-bg);
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.2s ease;
 }
 .skill-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 .skill-card img {
   width: 100%;
@@ -110,7 +122,7 @@ h2 {
 }
 .skill-card h3 {
   margin-top: 0;
-  color: #2b2d42;
+  color: var(--colour-primary);
 }
 .skill-card ul {
   list-style: none;
@@ -123,6 +135,7 @@ h2 {
   padding-left: 1.2rem;
   position: relative;
   line-height: 1.4;
+  color: var(--colour-light);
 }
 .skill-card ul li::before {
   content: '';
@@ -131,24 +144,25 @@ h2 {
   top: 0.6rem;
   width: 8px;
   height: 8px;
-  background-color: #ffd166;
+  background-color: var(--colour-primary);
   border-radius: 50%;
 }
 
 /* Projects Section */
 .projects-section .project {
   margin-bottom: 2rem;
-  background-color: #fff;
+  background-color: var(--colour-card-bg);
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .projects-section h3 {
   margin-top: 0;
-  color: #2b2d42;
+  color: var(--colour-primary);
 }
 .projects-section p {
   margin-bottom: 0;
+  color: var(--colour-light);
 }
 
 /* Contact Section */
@@ -161,7 +175,7 @@ h2 {
   margin-bottom: 0.5rem;
 }
 .contact-list a {
-  color: #2b7a78;
+  color: var(--colour-primary);
   text-decoration: none;
 }
 .contact-list a:hover {
@@ -170,10 +184,11 @@ h2 {
 
 /* Footer */
 .footer {
-  background-color: #222;
-  color: #fff;
+  background-color: var(--colour-bg);
+  color: var(--colour-light);
   text-align: center;
   padding: 1rem 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 /* Responsive adjustments */
@@ -187,5 +202,11 @@ h2 {
   }
   .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .nav-links {
+    gap: 0.75rem;
+  }
+  .logo {
+    font-size: 1.1rem;
   }
 }

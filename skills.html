@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills – Jeremiah Kerosi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Jeremiah Kerosi</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Skills Section -->
+  <section class="section skills-section">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <!-- Machine Learning & AI -->
+        <div class="skill-card">
+          <!-- Remove assets/ prefix: images are stored in repository root -->
+          <img src="machine_learning.png" alt="Machine Learning">
+          <h3>Machine Learning &amp; AI</h3>
+          <ul>
+            <li>Model training &amp; evaluation</li>
+            <li>Natural Language Processing (NLP)</li>
+            <li>Computer Vision (YOLO, multi‑label classification)</li>
+            <li>Predictive analytics &amp; clustering</li>
+          </ul>
+        </div>
+        <!-- Software Development -->
+        <div class="skill-card">
+          <img src="software_development.png" alt="Software Development">
+          <h3>Software Development</h3>
+          <ul>
+            <li>Python programming</li>
+            <li>API development (Flask &amp; FastAPI)</li>
+            <li>Web scraping &amp; data mining</li>
+            <li>ERP module &amp; backend development</li>
+          </ul>
+        </div>
+        <!-- Data Analytics & Databases -->
+        <div class="skill-card">
+          <img src="data_analytics.png" alt="Data Analytics">
+          <h3>Data Analytics &amp; Databases</h3>
+          <ul>
+            <li>SQL &amp; database management</li>
+            <li>Data analytics &amp; insights</li>
+            <li>Predictive trends analysis</li>
+            <li>Recruitment &amp; HR analytics</li>
+          </ul>
+        </div>
+        <!-- Cloud & DevOps -->
+        <div class="skill-card">
+          <img src="cloud_devops.png" alt="Cloud & DevOps">
+          <h3>Cloud &amp; DevOps</h3>
+          <ul>
+            <li>Cloud deployment (AWS, Vercel, Firebase)</li>
+            <li>Network &amp; system administration</li>
+            <li>Scalable infrastructure design</li>
+            <li>CI/CD &amp; automation pipelines</li>
+          </ul>
+        </div>
+        <!-- Automation & HR Tech -->
+        <div class="skill-card">
+          <img src="automation_hr.png" alt="Automation & HR Tech">
+          <h3>Automation &amp; HR Tech</h3>
+          <ul>
+            <li>Resume parsing &amp; candidate matching</li>
+            <li>Recruitment automation &amp; HR process optimisation</li>
+            <li>Algorithm optimisation for job matching</li>
+            <li>Candidate profile clustering &amp; classification</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="skillsYear"></span> Jeremiah Kerosi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Update footer year dynamically
+    document.getElementById('skillsYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
